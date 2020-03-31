@@ -199,7 +199,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.dinosaur-box {
+.Suga-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -208,7 +208,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.dinosaur-bar {
+.Suga-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,24 +216,24 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.deer-box {
+.Jimin-box {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
+  background-color: rgba(158, 84, 204, 0.2);
 }
-.deer-bar {
+.Jimin-bar {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
+  background-color: rgba(158, 84, 204, 1);
 }
-.dog-box {
+.V-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -242,7 +242,7 @@ body {
   width: 100%;
   background-color: rgba(27, 175, 234, 0.2);
 }
-.dog-bar {
+.V-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -250,24 +250,24 @@ body {
   border-radius: 10px;
   background-color: rgba(27, 175, 234, 1);
 }
-.cat-box {
+.Rap.Monster-box {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(251, 176, 59, 0.2);
+  background-color: rgba(222, 176, 59, 0.2);
 }
-.cat-bar {
+.Rap.Monster-bar {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(251, 176, 59, 1);
+  background-color: rgba(222, 176, 59, 1);
 }
-.bear-box {
+.J-Hope-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -276,7 +276,7 @@ body {
   width: 100%;
   background-color: rgba(195, 140, 102, 0.2);
 }
-.bear-bar {
+.J-Hope-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -284,7 +284,7 @@ body {
   border-radius: 10px;
   background-color: rgba(195, 140, 102, 1);
 }
-.fox-box {
+.Jungkook-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +293,7 @@ body {
   width: 100%;
   background-color: rgba(49, 132, 155, 0.2);
 }
-.fox-bar {
+.Jungkook-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -301,7 +301,7 @@ body {
   border-radius: 10px;
   background-color: rgba(49, 132, 155, 1);
 }
-.rabbit-box {
+.Jin-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -310,7 +310,7 @@ body {
   width: 100%;
   background-color: rgba(235, 166, 190, 0.2);
 }
-.rabbit-bar {
+.Jin-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -414,6 +414,32 @@ label {
   box-shadow: 0 0 0 8px #f470a7 inset;
   background-color: #fbd4e6;
   transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
 }
 
 input:checked + label > .knob {
