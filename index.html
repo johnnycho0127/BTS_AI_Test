@@ -40,8 +40,12 @@
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
-            <p class="reuslt-message"></p>
-			<img calss="result-image" src=""></img>
+            
+				<div style="padding:20px;border:4px solid black;margin-bottom:20px">
+						<img class="result-image" style="width:50%" src="" />
+						<p class="reuslt-message"></p>
+				</div>
+				
 		
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
             <div id="loading" class="animated bounce">
@@ -159,40 +163,48 @@
 
             switch (prediction[0].className) {
                 case "(뷔) V":
-                    resultmessage = "A.I predicts that you look like (뷔) V most"
-					
+                    resultmessage = "A.I predicts that you look like (뷔) V the most";
+					resultimage="V";
         	    	break;
 					
                 case "(지민) Jimin":
-                    resultmessage = "A.I predicts that you look like (지민) Jimin most"
+                    resultmessage = "A.I predicts that you look like (지민) Jimin the most";
+					resultimage="Jimin";
 		            break;
 					
                 case "(랩몬스터) Rap Monster":
-                    resultmessage = "AI predicts that you look like (랩몬스터) Rap Monster most"
+                    resultmessage = "AI predicts that you look like (랩몬스터) Rap Monster most";
+					resultimage="RM";
                     break;
 					
                 case "(슈가) Suga":
-                    resultmessage = "AI predicts that you look like (슈가) Suga most"
+                    resultmessage = "AI predicts that you look like (슈가) Suga most";
+					resultimage="Suga";
                     break;
 					
                 case "(제이홉) J-Hope":
-                    resultmessage = "AI predicts that you look like (제이홉) J-Hope most"
+                    resultmessage = "AI predicts that you look like (제이홉) J-Hope most";
+					resultimage="J-Hope";
                     break;
 					
                 case "(진) Jin":
-                    resultmessage = "AI predicts that you look like (진) Jin most"
+                    resultmessage = "AI predicts that you look like (진) Jin most";
+					resultimage="Jin";
                     break;
 					
                 case "(정국) Jungkook":
-                    resultmessage = "AI predicts that you look like (정국) Jungkook most"
+                    resultmessage = "AI predicts that you look like (정국) Jungkook most";
+					resultimage="Jungkook";
                     break;
 					
                 case "we do not know":
-                    resultmessage = "I am sorry. We can't predict you"
+                    resultmessage = "I am sorry. We can't predict you";
+					resultimage="Jungkook";
                     break;
             }
 			
             $('.reuslt-message').html(resultmessage);
+			$('.result-image').attr("src","BTSimage/"+resultimage+".gif");
 		
 			
             var barWidth;
