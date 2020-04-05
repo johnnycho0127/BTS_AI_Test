@@ -233,7 +233,16 @@ body {
   border-radius: 10px;
   background-color: rgba(158, 84, 204, 1);
 }
+
+.resultimage {
+background-image: url(/V.jpg);
+background-repeat: no-repeat;
+width: 10px;
+height: 20px;
+}
+
 .V-box {
+
   position: absolute;
   top: 0;
   left: 0;

@@ -41,7 +41,8 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <p class="reuslt-message"></p>
-
+			<img calss="result-image" src=""></img>
+		
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
             <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
@@ -82,6 +83,7 @@
 
     <div id="webcam-container"></div>
     <div id="label-container"></div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -154,41 +156,45 @@
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             console.log(prediction[0].className);
             var resultmessage;
+
             switch (prediction[0].className) {
                 case "(뷔) V":
-                    resultmessage = "AI predicts that you look like (뷔) V"
-			    	break;
+                    resultmessage = "A.I predicts that you look like (뷔) V most"
+					
+        	    	break;
 					
                 case "(지민) Jimin":
-                    resultmessage = "AI predicts that you look like (지민) Jimin"
+                    resultmessage = "A.I predicts that you look like (지민) Jimin most"
 		            break;
 					
                 case "(랩몬스터) Rap Monster":
-                    resultmessage = "AI predicts that you look like (랩몬스터) Rap Monster"
+                    resultmessage = "AI predicts that you look like (랩몬스터) Rap Monster most"
                     break;
 					
                 case "(슈가) Suga":
-                    resultmessage = "AI predicts that you look like (슈가) Suga"
+                    resultmessage = "AI predicts that you look like (슈가) Suga most"
                     break;
 					
                 case "(제이홉) J-Hope":
-                    resultmessage = "AI predicts that you look like (제이홉) J-Hope"
+                    resultmessage = "AI predicts that you look like (제이홉) J-Hope most"
                     break;
 					
                 case "(진) Jin":
-                    resultmessage = "AI predicts that you look like (진) Jin"
+                    resultmessage = "AI predicts that you look like (진) Jin most"
                     break;
 					
                 case "(정국) Jungkook":
-                    resultmessage = "AI predicts that you look like (정국) Jungkook"
+                    resultmessage = "AI predicts that you look like (정국) Jungkook most"
                     break;
 					
                 case "we do not know":
                     resultmessage = "I am sorry. We can't predict you"
                     break;
             }
-			 
+			
             $('.reuslt-message').html(resultmessage);
+		
+			
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                 if (prediction[i].probability.toFixed(2) > 0.1) {
@@ -202,6 +208,7 @@
                 switch (prediction[i].className) {
                     case "(뷔) V":
                         labelTitle = "V"
+					
                         break;
                     case "(지민) Jimin":
                         labelTitle = "Jimin"
@@ -222,9 +229,11 @@
                         labelTitle = "Jungkook"
                         break;
                 }
+		
                 var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
                 var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
                 labelContainer.childNodes[i].innerHTML = label + bar;
+		
             }
         }
     </script>
