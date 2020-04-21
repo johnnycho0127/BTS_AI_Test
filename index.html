@@ -42,18 +42,17 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <div class="row">
-                
-				<div class="col-md-6" style="padding:20px;margin-bottom:20px;">
-						<img class="result-image" style="" src="" />
-						<p class="reuslt-message" style="" src=""></p>
-					
-					
-				</div>
-				
-		  <div class="col-md-6">
-            <div id="label-container" class="d-flex flex-column justify-content-around result-stats"></div>
-              </div>
+
+                <div class="col-md-6" style="padding:20px;margin-bottom:20px;">
+                    <img class="result-image" style="" src="" />
+                    <p class="reuslt-message" style="" src=""></p>
+
                 </div>
+
+                <div class="col-md-6">
+                    <div id="label-container" class="d-flex flex-column justify-content-around result-stats"></div>
+                </div>
+            </div>
             <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
@@ -68,46 +67,57 @@
                 <button type="button p-2" onclick="window.location.reload()" class="btn-predict">
                     <span class="">Try another picture</span>
                 </button>
-				 <section class="d-flex justify-content-center">
-            <form action="camera.html">
-        
-                <div class="predict-btn-div">
-                <button type="submit" class="btn-predict">real-time prediction</button>
-                </div>
-            </form>
+                <section class="d-flex justify-content-center">
+                    <form action="camera.html">
 
-        </section>
+                        <div class="predict-btn-div">
+                            <button type="submit" class="btn-predict">real-time prediction</button>
+                        </div>
+                    </form>
+
+                </section>
             </div>
         </div>
-		
-		<div id="coupang" class="container d-flex justify-content-center">
-      <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:222808 });
-</script>
-    </div> 
-		
-		 <div id="kakao" class="container d-flex justify-content-center">
-		<ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-ubp6ny2e7dk4" 
- data-ad-width   = "728" 
- data-ad-height  = "90"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script></div>
-		
-		<footer class="footer pt-3 container d-flex justify-content-center">
-        <div>
-            <p>&copy; BlueBox 2020. All Rights Reserved. </p>
-   
+
+        <div class="container d-flex justify-content-center">
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+                new PartnersCoupang.G({
+                    id: 222808
+                });
+            </script>
         </div>
-    </footer>
-		
+
+        <div class="alignleft">
+            <script type="text/javascript">
+                amzn_assoc_ad_type = "banner";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_placement = "assoc_banner_placement_default";
+                amzn_assoc_banner_type = "ez";
+                amzn_assoc_p = "7";
+                amzn_assoc_width = "468";
+                amzn_assoc_height = "40";
+                amzn_assoc_tracking_id = "bluebox00-20";
+                amzn_assoc_linkid = "fae880630f35cb675bb8b8eb98a157ea";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+        </div>
+
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-u87z797d0b3o" data-ad-width="320" data-ad-height="50"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+        <div class="a">이 포스팅은 쿠팡 파트너스의 일환으로 이에 따른 일정 수수료를 제공받고 있습니다.</div>
+
+        <footer class="footer pt-3 container d-flex justify-content-center">
+            <div>
+                <p>&copy; BlueBox 2020. All Rights Reserved. </p>
+            </div>
+        </footer>
     </div>
-	
-	
 
     <div id="webcam-container"></div>
     <div id="label-container"></div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -180,61 +190,52 @@
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             console.log(prediction[0].className);
             var resultExplain, resultTitle;
-			 var label = "<div class='BTS-label d-flex align-items-center'>" + labelTitle + "</div>"
-			
+            var label = "<div class='BTS-label d-flex align-items-center'>" + labelTitle + "</div>"
             switch (prediction[0].className) {
                 case "(뷔) V":
-					resultimage="V"
+                    resultimage = "V"
                     resultTitle = "You look like V"
-					resultExplain = "Vocalist, Visual, Second Youngest, Part of the Dance Line, Nickname- TaeTae and Taehyungie. He's like a koala."
-        	    	break;
-					
+                    resultExplain = "Vocalist, Visual, Second Youngest, Part of the Dance Line, Nickname- TaeTae and Taehyungie. He's like a koala."
+                    break;
                 case "(지민) Jimin":
-                   resultTitle = "You look like Jimin"
-					resultExplain = "Vocalsit, Part of the Dance Line, Third Youngest, Nickname- Chim Chim and Jimine"
-					resultimage="Jimin";
-		            break;
-					
+                    resultTitle = "You look like Jimin"
+                    resultExplain = "Vocalsit, Part of the Dance Line, Third Youngest, Nickname- Chim Chim and Jimine"
+                    resultimage = "Jimin";
+                    break;
                 case "(랩몬스터) Rap Monster":
-                    resultimage="RM";
-					resultTitle = "You look like Rap Monster(RM)"
-					resultExplain = "Rapper, Leader of the group, Third oldest, Nickname- God of Destruction (Members call him that sometimes but fans don’t~)"
+                    resultimage = "RM";
+                    resultTitle = "You look like Rap Monster(RM)"
+                    resultExplain = "Rapper, Leader of the group, Third oldest, Nickname- God of Destruction (Members call him that sometimes but fans don’t~)"
                     break;
-					
                 case "(슈가) Suga":
-                  resultimage="Suga";
-					resultTitle = "You look like Suga"
-					resultExplain = "Rapper (actually one of the fastest rappers ever), 2ND Oldest member"
+                    resultimage = "Suga";
+                    resultTitle = "You look like Suga"
+                    resultExplain = "Rapper (actually one of the fastest rappers ever), 2ND Oldest member"
                     break;
-					
                 case "(제이홉) J-Hope":
-                   resultTitle = "You look like J-Hope"
-					resultExplain = "Rapper, Dance Choreographer, Part of the Dance Line, Nickname~ Hobi"
-                   resultimage="J-Hope";
+                    resultTitle = "You look like J-Hope"
+                    resultExplain = "Rapper, Dance Choreographer, Part of the Dance Line, Nickname~ Hobi"
+                    resultimage = "J-Hope";
                     break;
-					
                 case "(진) Jin":
                     resultTitle = "You look like Jin"
-					resultExplain = "Vocalsit, Visual, Oldest member and mom of the group, Nickname- World Wide Handsome (Members don’t call him that but fans do~)"
-                 	resultimage="Jin";
+                    resultExplain = "Vocalsit, Visual, Oldest member and mom of the group, Nickname- World Wide Handsome (Members don’t call him that but fans do~)"
+                    resultimage = "Jin";
                     break;
-					
                 case "(정국) Jungkook":
-                     resultTitle = "You look like Jungkook"
-					resultExplain = "Lead Vocalist, Part of Dance Line, Golden Maknae (Means- Youngest member and also good at literally everything) Nickname- International Playboy and Kookie"
-                 resultimage="Jungkook";
+                    resultTitle = "You look like Jungkook"
+                    resultExplain = "Lead Vocalist, Part of Dance Line, Golden Maknae (Means- Youngest member and also good at literally everything) Nickname- International Playboy and Kookie"
+                    resultimage = "Jungkook";
                     break;
-					
                 case "we do not know":
                     resultTitle = "I am sorry. We can't predict you";
-					resultimage="question";
+                    resultimage = "question";
                     break;
             }
-			var title = "<div class='BTS-title'>" + resultTitle +"</div>"
-			var explain = "<div class='BTS-explain'>" + resultExplain +"</div>"
+            var title = "<div class='BTS-title'>" + resultTitle + "</div>"
+            var explain = "<div class='BTS-explain'>" + resultExplain + "</div>"
             $('.reuslt-message').html(title + explain);
-			$('.result-image').attr("src","BTSimage/"+resultimage+".jpeg");
-					
+            $('.result-image').attr("src", "BTSimage/" + resultimage + ".jpeg");
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                 if (prediction[i].probability.toFixed(2) > 0.1) {
@@ -268,22 +269,13 @@
                         labelTitle = "Jungkook"
                         break;
                 }
-		
                 var label = "<div class='BTS-label d-flex align-items-center'>" + labelTitle + "</div>"
                 var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
                 labelContainer.childNodes[i].innerHTML = label + bar;
-		
             }
         }
     </script>
-	
-<ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-s0uzmbd98gtw" 
- data-ad-width   = "250" 
- data-ad-height  = "250"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-
-	</body>
+</body>
 <!--	Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

@@ -6,6 +6,10 @@ body {
     background: linear-gradient(142.5deg, rgba(137, 196, 244, 1) 50%, rgba(117, 176, 224, 1) 50%);
 }
 
+div.a {
+  font-size: 8px;
+}
+
 .file-upload {
     padding: 3% 5%;
     margin: 20px auto;
