@@ -1,13 +1,15 @@
 body {
-  font-family: 'Jua', sans-serif;
+      font-family: Sofia Pro;
   background-color: #ffffff;
   box-sizing: border-box;
   color: #35465d;
+    background: linear-gradient(142.5deg, rgba(137, 196, 244, 1) 50%, rgba(117, 176, 224, 1) 50%);
 }
+
 .file-upload {
-    padding: 15% 3%;
-    margin: 0 auto;
-    border-radius: 10px;
+    padding: 3% 5%;
+    margin: 20px auto;
+    border-radius: 50px;
     border: solid 1.5px #f6f7fa;
     background-color: #f6f7fa;
 }
@@ -24,6 +26,30 @@ body {
   outline: none;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.btn-predict{
+    background: #f6f7fa;
+    color: #35465d;
+    border: none;
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn-predict:hover{
+    background: #fff;
+    
+}
+
+.predict-btn-div{
+    text-align: center;
 }
 
 .file-upload-btn:hover {
@@ -46,6 +72,15 @@ body {
   display: none;
 }
 
+.heading-hr{
+    width: 50%;
+    
+}
+
+.result-image{
+    width: 50%;
+}
+
 .file-upload-input {
   position: absolute;
   margin: 0;
@@ -58,11 +93,11 @@ body {
 }
 
 .image-upload-wrap {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 20px;
     border: dashed 1.5px #35465d;
     background-color: #ffffff;
 }
@@ -88,8 +123,7 @@ body {
 }
 
 .file-upload-image {
-  max-height: 60%;
-  max-width: 60%;
+  max-width: 250px;
   margin: auto;
   padding: 10px;
 }
@@ -130,18 +164,17 @@ body {
     border-color: #ffffff;
 }
 
-.section {
-    margin-top: 50px;
+.top-section {
+    margin-top: 25px;
 }
 
 .title {
-  line-height: 1.67;
   text-align: center;
   color: #35465d;
 }
 
 .subtitle {
-  line-height: 1.53;
+font-size: 20px;
   text-align: center;
   color: #35465d;
 }
@@ -154,38 +187,21 @@ body {
     .navbar-brand {
         font-size: 2rem;
     }
+    
+    .result-stats {
+    margin-top: 2% !important;
+}
+    
 }
 
 
-.youtube-link {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-link:hover {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-icon {
-    width: 30px;
-    height: 27.262px;
-}
 
 .upload {
     width: 20%;
 }
 
 .upload-text {
-    width: 58%;
-    font-size: 1.5rem;
-    line-height: 1.53;
+    font-size: 16px;
     text-align: center;
     color: #35465d;
     margin: 0 auto;
@@ -232,13 +248,6 @@ body {
   height: 2rem;
   border-radius: 10px;
   background-color: rgba(158, 84, 204, 1);
-}
-
-.resultimage {
-background-image: url(/V.jpg);
-background-repeat: no-repeat;
-width: 10px;
-height: 20px;
 }
 
 .V-box {
@@ -331,78 +340,40 @@ height: 20px;
   font-size: 1rem;
   color: #ffffff;
 }
-.animal-label {
+.BTS-label {
     width: 20%;
     text-align: left;
     height: 2rem;
 }
-#label-container {
+.label-container {
     width: 80%;
     margin: 0 auto;
 }
+
 .result-message {
     font-size: 2rem;
 }
 
+.result-stats{
+    margin-top: 15%;
+}
 
-.animal-explain {
-    font-size: 1.5rem;
+.BTS-title {
+	font-family: Sofia Pro;
+    font-size: 1.4rem;
+	   color: #ff6c0a;
 }
-.dinosaur-animal-title {
-    color: #3ba363;
-}
-.dinosaur-animal-celeb {
-    color: #3ba363;
-    font-size: 1.2rem;
-}
-.deer-animal-title {
-    color: #3ba363;
-}
-.deer-animal-celeb {
-    color: #3ba363;
-    font-size: 1.2rem;
-}
-.cat-animal-title {
-    color: #ff6c0a;
-}
-.cat-animal-celeb {
-    color: #ff6c0a;
-    font-size: 1.2rem;
-}
-.dog-animal-title {
-    color: #548dd4;
-}
-.dog-animal-celeb {
-    color: #548dd4;
-    font-size: 1.2rem;
-}
-.rabbit-animal-title {
-    color: #e56995;
-}
-.rabbit-animal-celeb {
-    color: #e56995;
-    font-size: 1.2rem;
-}
-.bear-animal-title {
-    color: #9b6b43;
-}
-.bear-animal-celeb {
-    color: #9b6b43;
-    font-size: 1.2rem;
-}
-.fox-animal-title {
-    color: #31849b;
-}
-.fox-animal-celeb {
-    color: #31849b;
-    font-size: 1.2rem;
+
+.BTS-explain {
+	font-family: Sofia Pro;
+    font-size: 1rem;
+color: #548dd4;
 }
 
 /* gender */
 input#gender {
   display: none;
 }
-
 label {
   cursor: pointer;
   display: inline-block;
@@ -477,4 +448,224 @@ input:checked + label > .knob > i:before {
   width: 12px;
   left: 0px;
   transform: rotate(134deg);
+}
+
+.mediaViewInfo {
+	--web-view-name: Upload;
+	--web-view-id: Upload;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Upload;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Upload {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background: linear-gradient(142.5deg, rgba(248,248,252,1) 0%, rgba(225,226,232,1) 100%);
+	overflow: hidden;
+	--web-view-name: Upload;
+	--web-view-id: Upload;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes  {
+
+
+}
+#Social {
+	position: absolute;
+	width: 540px;
+	height: 148px;
+	left: 691px;
+	top: 34px;
+	overflow: visible;
+}
+#Which_BTS_member_do_you_resemb {
+	position: absolute;
+	left: 0px;
+	top: 98px;
+	overflow: visible;
+	width: 541px;
+	height: 50px;
+	text-align: left;
+	font-family: Sofia Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(87,95,107,1);
+}
+.Line_6 {
+	overflow: visible;
+	position: absolute;
+	width: 535px;
+	height: 1px;
+	left: 2.5px;
+	top: 82.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#BTS_AI_Test {
+	position: absolute;
+	left: 152px;
+	top: 0px;
+	overflow: visible;
+	width: 237px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Sofia Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(87,95,107,1);
+}
+#Combined_box_2 {
+	position: absolute;
+	width: 826px;
+	height: 749px;
+	left: 547px;
+	top: 228px;
+	overflow: visible;
+}
+.Rectangle_DS {
+	filter: drop-shadow(3px 3px 20px rgba(36, 65, 93, 0.302));
+	position: absolute;
+	overflow: visible;
+	width: 460px;
+	height: 254px;
+	left: 233px;
+	top: 274px;
+}
+.Rectangle_WS_u {
+	filter: drop-shadow(-3px 3px 20px rgba(247, 247, 251, 1));
+	position: absolute;
+	overflow: visible;
+	width: 886px;
+	height: 809px;
+	left: 0px;
+	top: 0px;
+}
+#Mask_Group_2 {
+	position: absolute;
+	width: 455px;
+	height: 455px;
+	left: 186px;
+	top: 124px;
+	overflow: visible;
+}
+#Mask_Group_3 {
+	opacity: 0;
+	position: absolute;
+	width: 455px;
+	height: 75px;
+	left: 186px;
+	top: 504px;
+	overflow: visible;
+}
+#Please_Upload_Your_picture_her {
+	position: absolute;
+	left: 202px;
+	top: 61px;
+	overflow: visible;
+	width: 423px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sofia Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(87,95,107,1);
+}
+#__Johnny_Cho_2020__All_Rights_ {
+	position: absolute;
+	left: 288px;
+	top: 714px;
+	overflow: visible;
+	width: 251px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sofia Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(87,95,107,1);
+}
+.Icon_ionic_md_cloud_upload {
+	overflow: visible;
+	position: absolute;
+	width: 164.504px;
+	height: 109.669px;
+	left: 331.748px;
+	top: 319.415px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Sign_In_button {
+	position: absolute;
+	width: 300px;
+	height: 80px;
+	left: 263px;
+	top: 602px;
+	overflow: visible;
+	--web-animation: fadein 1s ease-out;
+	--web-action-type: page;
+	--web-action-target: Upload___1.html;
+	cursor: pointer;
+}
+#Rectangle_DS_ {
+	opacity: 0.8;
+}
+.Rectangle_DS_ {
+	filter: drop-shadow(3px 3px 20px rgba(36, 65, 93, 0.302));
+	position: absolute;
+	overflow: visible;
+	width: 360px;
+	height: 140px;
+	left: 0px;
+	top: 0px;
+}
+.Rectangle_WS_ba {
+	filter: drop-shadow(-6px -6px 30px rgba(255, 255, 255, 1));
+	position: absolute;
+	overflow: visible;
+	width: 390px;
+	height: 170px;
+	left: 0px;
+	top: 0px;
+}
+#Group_1 {
+	position: absolute;
+	width: 139.294px;
+	height: 37px;
+	left: 80px;
+	top: 20px;
+	overflow: visible;
+}
+#UPLOAD {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sofia Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	color: rgba(87,95,107,1);
+}
+.Icon_ionic_md_arrow_forward {
+	overflow: visible;
+	position: absolute;
+	width: 19.665px;
+	height: 19.665px;
+	left: 119.63px;
+	top: 10.647px;
+	transform: matrix(1,0,0,1,0,0);
 }
