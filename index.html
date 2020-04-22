@@ -24,7 +24,7 @@
 <body>
 
     <section class="top-section">
-        <h1 class="title">BTS AI Test</h1>
+        <h1 class="title"><strong>BTS</strong> AI Test</h1>
         <hr class="heading-hr">
         <h2 class="subtitle">Which BTS member do you resemble the most?</h2>
     </section>
@@ -42,17 +42,22 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <div class="row">
-
-                <div class="col-md-6" style="padding:20px;margin-bottom:20px;">
-                    <img class="result-image" style="" src="" />
-                    <p class="reuslt-message" style="" src=""></p>
-
+                
+				<div class="col-md-6">
+                    <div class="achivement-box">
+						<img class="result-image" style="" src="" />
+						<p class="reuslt-message" style="" src=""></p>
+					
+                    </div>
+				</div>
+				
+		  <div class="col-md-6 ">
+              <div class="achivement-box">
+            <div id="label-container" class="d-flex flex-column justify-content-around result-stats"></div>
+              </div>
                 </div>
-
-                <div class="col-md-6">
-                    <div id="label-container" class="d-flex flex-column justify-content-around result-stats"></div>
                 </div>
-            </div>
+			
             <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
@@ -71,10 +76,8 @@
                     <form action="camera.html">
 
                         <div class="predict-btn-div">
-                            <button type="submit" class="btn-predict">real-time prediction</button>
-							<p>
-								* Real-time prediction is only able to play via webcam *<br/>
-								<a href="https://btsaitest.netlify.app/">https://btsaitest.netlify.app/</a>
+                            <button type="submit" class="btn-predict">Real-time prediction</button>
+							<p> *If real-time prediciton is not working, please visit Web version: <a href="https://btsaitest.netlify.app/">https://btsaitest.netlify.app/</a>
 							</p>
                         </div>
                     </form>
@@ -125,6 +128,43 @@
     <div id="webcam-container"></div>
     <div id="label-container"></div>
 
+	
+ <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adModalLabel">(AD)광고 - 재시도를 한번 더 눌러주세요.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ubp6ny2e7dk4" 
+ data-ad-width   = "300" 
+ data-ad-height  = "250"></ins>
+                </div>
+
+  <script>
+        function gaReload() {
+            gtag('event', '다른 사진으로 재시도', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+        function gaReload1() {
+            gtag('event', '다른 사진으로 재시도 1차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+        }
+        function gaReload2() {
+            gtag('event', '다른 사진으로 재시도 2차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+    </script>
+	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
