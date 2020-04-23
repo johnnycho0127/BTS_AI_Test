@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://btsaitest.netlify.app/sitemap.xml
