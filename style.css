@@ -684,6 +684,7 @@ input:checked + label > .knob > i:before {
 	transform: matrix(1,0,0,1,0,0);
 }
 
+/*
 .achivement-box {
 	text-align: center;
 	margin: 30px 0;
@@ -763,7 +764,7 @@ input:checked + label > .knob > i:before {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 }
-
+*/
 .section-title.center {
 	padding: 10px 0 0 0;
 	text-align: center;
