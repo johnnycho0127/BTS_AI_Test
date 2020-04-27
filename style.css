@@ -11,13 +11,19 @@ div.a {
 	  text-align: center;
 }
 div.b {
-  font-size: 12px;
-	  text-align: center;
+  font-size: 15px;
+ text-align: center;
 }
 
 div.c {
   font-size: 12px;
 	  text-align: center;
+}
+
+div.d {
+  font-size: 15px;
+	  text-align: center;
+	color: #0000FF;
 }
 
 .file-upload {
@@ -107,7 +113,7 @@ div.c {
 }
 
 .image-upload-wrap {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     position: relative;
     object-fit: contain;
@@ -379,13 +385,13 @@ font-size: 20px;
 
 .BTS-title {
 	font-family: Sofia Pro;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 	   color: #ff6c0a;
 }
 
 .BTS-explain {
 	font-family: Sofia Pro;
-    font-size: 1rem;
+    font-size: 1.5rem;
 color: #548dd4;
 }
 
